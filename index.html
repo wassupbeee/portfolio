@@ -166,21 +166,35 @@
         </div>
     </div>
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 bg-white/50 backdrop-blur-sm">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 bg-white/50 backdrop-blur-sm border-b border-transparent">
         <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Header Logo Section -->
             <a href="#" class="flex items-center gap-3 group">
                 <div class="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
-                    <div class="w-full h-full rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">C</div>
+                    <img 
+                        src="img/creativepeak_logo.png" 
+                        alt="Creative Peak Logo Icon" 
+                        class="w-full h-full object-contain transition-transform duration-300 group-hover:rotate-12 z-10"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" 
+                    />
+                    <div class="hidden w-full h-full rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 items-center justify-center text-white font-bold text-xl shadow-lg border border-white/20">C</div>
                 </div>
+                
                 <div class="h-6 md:h-8 flex items-center">
-                    <span class="font-bold text-xl tracking-tight text-slate-900">Creative Peak</span>
+                    <img 
+                        src="img/creativepeak_logotext_b.png" 
+                        alt="Creative Peak Logo Text" 
+                        class="h-full object-contain mt-1" 
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                    />
+                    <span class="hidden font-bold text-xl tracking-tight text-slate-900 group-hover:text-cyan-600 transition-colors">Creative Peak</span>
                 </div>
             </a>
 
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-sm font-medium hover:text-cyan-500 transition-colors hover-underline">About</a>
                 <a href="#works" class="text-sm font-medium hover:text-cyan-500 transition-colors hover-underline">Works</a>
-                <a href="#contact" class="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-bold shadow-md hover:shadow-lg transition-all duration-300">
+                <a href="#contact" class="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-bold shadow-md hover:shadow-lg hover:shadow-cyan-500/30 transform hover:-translate-y-1 active:translate-y-0 transition-all duration-300">
                     Contact
                 </a>
             </div>
@@ -258,10 +272,10 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="w-full md:w-1/2 relative reveal items-center justify-center flex">
+                <div class="w-full md:w-1/2 relative reveal items-center justify-center flex text-center">
                     <div class="relative z-10 group">
                         <div class="absolute -inset-4 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full opacity-20 blur-md group-hover:opacity-40 transition-opacity duration-500" style="animation: spin 20s linear infinite;"></div>
-                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl transition-transform duration-500 transform rotate-0 group-hover:rotate-3 group-hover:scale-105 bg-slate-200 flex items-center justify-center text-center">
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl transition-transform duration-500 transform rotate-0 group-hover:rotate-3 group-hover:scale-105 bg-slate-200 flex items-center justify-center">
                             <img 
                                 src="img/myface.jpg" 
                                 alt="江畑 文隆" 
@@ -288,7 +302,6 @@
                         <span class="text-cyan-600 font-bold tracking-widest text-sm uppercase mb-2 block">Strategy & Design</span>
                         <h2 class="text-3xl md:text-4xl font-bold mb-6">江畑 文隆 <span class="text-lg font-normal text-slate-400 ml-2">Ebata Fumitaka</span></h2>
                     </div>
-                    <!-- Updated Introduction Text -->
                     <div class="reveal space-y-4 text-slate-600 leading-relaxed" style="transition-delay: 300ms;">
                         <p>
                             東京都を拠点に活動する、戦略型ディレクター兼デザイナー。
@@ -329,7 +342,7 @@
         </div>
     </section>
 
-    <section id="works" class="py-24 relative">
+    <section id="works" class="py-24 relative bg-white">
         <div class="container mx-auto px-6">
             <div class="reveal text-center mb-16">
                 <span class="text-cyan-600 font-bold tracking-widest text-sm uppercase">Selected Works</span>
@@ -338,7 +351,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-                <!-- Works Items -->
+                <!-- Works Item 1 -->
                 <div onclick="openModal('work1')" class="reveal group cursor-pointer perspective-1000" style="transition-delay: 100ms;">
                     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-100 transform transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
                         <div class="img-placeholder">
@@ -350,6 +363,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Works Item 2 -->
                 <div onclick="openModal('work2')" class="reveal group cursor-pointer perspective-1000" style="transition-delay: 200ms;">
                     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-100 transform transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
                         <div class="img-placeholder">
@@ -361,6 +375,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Works Item 3 -->
                 <div onclick="openModal('work3')" class="reveal group cursor-pointer perspective-1000" style="transition-delay: 300ms;">
                     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-100 transform transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
                         <div class="img-placeholder">
@@ -372,6 +387,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Works Item 4 -->
                 <div onclick="openModal('work4')" class="reveal group cursor-pointer perspective-1000" style="transition-delay: 400ms;">
                     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-100 transform transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
                         <div class="img-placeholder">
@@ -383,6 +399,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Works Item 5 -->
                 <div onclick="openModal('work5')" class="reveal group cursor-pointer perspective-1000" style="transition-delay: 500ms;">
                     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-100 transform transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
                         <div class="img-placeholder">
@@ -394,6 +411,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Works Item 6 -->
                 <div onclick="openModal('work6')" class="reveal group cursor-pointer perspective-1000" style="transition-delay: 600ms;">
                     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-100 transform transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
                         <div class="img-placeholder">
@@ -405,6 +423,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Works Item 7 -->
                 <div onclick="openModal('work7')" class="reveal group cursor-pointer perspective-1000" style="transition-delay: 700ms;">
                     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-100 transform transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
                         <div class="img-placeholder">
@@ -416,6 +435,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Works Item 8 -->
                 <div onclick="openModal('work8')" class="reveal group cursor-pointer perspective-1000" style="transition-delay: 800ms;">
                     <div class="relative overflow-hidden rounded-2xl shadow-lg aspect-video bg-slate-100 transform transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
                         <div class="img-placeholder">
@@ -475,7 +495,6 @@
                         </div>
                     </form>
 
-                    <!-- Custom Thank You Message (Hidden by default) -->
                     <div id="thanks-container" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center z-20 border border-cyan-100">
                         <div class="w-20 h-20 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center mb-6 animate-bounce">
                             <i class="fas fa-check text-4xl"></i>
@@ -493,9 +512,42 @@
         </div>
     </section>
 
-    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-center">
+    <!-- Footer Logo Section -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
         <div class="container mx-auto px-6">
-            <p class="text-xs">&copy; 2025 Creative Peak / Ebata Fumitaka. All rights reserved.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="#" class="flex items-center gap-2 mb-4 md:mb-0 group">
+                    <div class="relative w-8 h-8 flex items-center justify-center">
+                        <img 
+                            src="img/creativepeak_logo.png" 
+                            alt="Creative Peak Logo Icon" 
+                            class="absolute inset-0 w-full h-full object-contain group-hover:rotate-12 transition-transform duration-300 z-10"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" 
+                        />
+                        <div class="hidden w-full h-full rounded bg-gradient-to-br from-cyan-400 to-blue-600 items-center justify-center text-white font-bold shadow-lg text-sm">C</div>
+                    </div>
+                    
+                    <div class="h-6 flex items-center">
+                        <img 
+                            src="img/creativepeak_logotext_w.png" 
+                            alt="Creative Peak Logo Text" 
+                            class="h-full object-contain mt-1 brightness-0 invert"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        />
+                        <span class="hidden font-bold text-lg tracking-tight text-white group-hover:text-cyan-400 transition-colors">Creative Peak</span>
+                    </div>
+                </a>
+                
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="hover:text-white transition-colors hover-underline">Home</a>
+                    <a href="#about" class="hover:text-white transition-colors hover-underline">About</a>
+                    <a href="#works" class="hover:text-white transition-colors hover-underline">Works</a>
+                    <a href="#contact" class="hover:text-white transition-colors hover-underline">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-900 text-center text-xs">
+                <p>&copy; 2025 Creative Peak / Ebata Fumitaka. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -505,10 +557,10 @@
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.remove('bg-white/50', 'py-6');
-                navbar.classList.add('bg-white/90', 'shadow-sm', 'py-4');
+                navbar.classList.add('bg-white/90', 'shadow-sm', 'py-4', 'border-slate-100');
             } else {
                 navbar.classList.add('bg-white/50', 'py-6');
-                navbar.classList.remove('bg-white/90', 'shadow-sm', 'py-4');
+                navbar.classList.remove('bg-white/90', 'shadow-sm', 'py-4', 'border-slate-100');
             }
         });
 
@@ -557,7 +609,7 @@
                 category: "Web Design / Direction",
                 img: "img/yutakagym_sample.png",
                 desc: "古民家と自然,最新機器が融合した空間を表現したサービスサイト。「サードプレイス」としてのブランディングを行い、大手ジムとの比較表や体験フローを配置することで、高い成約率（CVR）を実現する動線を構築しました。",
-                points: ["和・モダンのビジュアルストーリー：高品質な写真と贅沢な余白により、訪れた瞬間に心が落ち着くブランド体験を提供。", "情緒と機能のタイポグラフィ：キャッチコピーには縦書き明朝体で静謐さを、実務情報にはサンセリフ体で可読性と洗練さを両立。", "論理的な意思決定支援：商社での実務経験を活かし、抽象的な魅力を比較表などのデータによって「機能的価値」へと翻訳。"],
+                points: ["和・モダンのビジュアルストーリー：高品質な写真と贅沢な余白により、訪れた瞬間に心が落ち着くブランド体験を提供。", "情緒と機能のタイポグラフィ：キャッチコピーには縦書き明朝体で静謐さを、実務情報にはサンセリフ体で可読性と洗練さを両立。", "論理的な意思決定支援：商社での実務経験を活かし、抽象的な魅力を比較表などのデータによって「機能推移」へと翻訳。"],
                 link: "https://personalgymyutaka.com/",
                 icon: "fas fa-laptop-code"
             },
@@ -624,9 +676,9 @@
             const imgContainer = document.getElementById('modal-img-container');
             // object-centerで中央揃え
             imgContainer.innerHTML = `<img src="${data.img || ''}" alt="${data.title}" class="max-w-full max-h-[60vh] object-contain object-center shadow-md rounded-lg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                      <div class="hidden flex-col items-center justify-center p-20 text-slate-300">
+                                      <div class="hidden flex-col items-center justify-center p-20 text-slate-300 text-center">
                                           <i class="${data.icon} text-7xl mb-4"></i>
-                                          <p class="text-xs uppercase tracking-widest">Preview Only</p>
+                                          <p class="text-xs uppercase tracking-widest">Image Unavailable</p>
                                       </div>`;
 
             const pointsList = document.getElementById('modal-points');
